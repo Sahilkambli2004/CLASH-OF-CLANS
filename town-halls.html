@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Town Halls</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="townhall.css">
+</head>
+
+<body>
+
+<nav>
+   <div class="logo-area">
+        <img src="babhead.png" class="small-logo">
+        <img src="cocmainlogo.png" class="main-logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="town-halls.html" class="active">TOWN HALLS</a>
+        <a href="buildings.html">BUILDINGS</a>
+        <a href="defence.html">DEFENCE</a>
+        <a href="news.html">NEWS</a>
+        <a href="more.html">MORE⌄</a>
+    </div>
+
+    <div class="nav-search">
+        <input type="text" id="searchInput" placeholder="🔍 Search..." onkeyup="searchTownHall()">
+    </div>
+</nav>
+
+<section class="town-hero">
+    <h1 class="town-title">THE EVOLUTION OF TOWN HALLS⚔️</h1>
+</section>
+
+
+
+<div class="container-wrapper">
+<section class="product-container">
+
+<div class="product-card1">
+    <span class="level-badge">1</span>
+    <div class="img-box"><img src="townhall1.png"></div>
+    <h3>TOWN HALL 1</h3>
+    <p>Tutorial level<br>Only basics: build, collect, attack</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">2</span>
+    <div class="img-box"><img src="townhall2.png" loading="lazy"></div>
+    <h3>TOWN HALL 2</h3>
+    <p>More buildings unlocked<br>Basic base expansion starts</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/2.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">3</span>
+    <div class="img-box"><img src="townhall3.png" loading="lazy"></div>
+    <h3>TOWN HALL 3</h3>
+    <p>Stronger defense begins<br>More attacking options</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/3.jpeg','townhallsub/3.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">4</span>
+    <div class="img-box"><img src="townhall4.png" loading="lazy"></div>
+    <h3>TOWN HALL 4</h3>
+    <p>Better upgrades<br>Base starts becoming stronger</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/4.jpeg','townhallsub/4.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">5</span>
+    <div class="img-box"><img src="townhall5.png" loading="lazy"></div>
+    <h3>TOWN HALL 5</h3>
+    <p>Good farming stage<br>Defense and army improve</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/5.jpeg','townhallsub/5.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">6</span>
+    <div class="img-box"><img src="townhall6.png" loading="lazy"></div>
+    <h3>TOWN HALL 6</h3>
+    <p>Stronger village setup<br>More upgrade planning needed</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/6.jpeg','townhallsub/6.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">7</span>
+    <div class="img-box"><img src="townhall7.png" loading="lazy"></div>
+    <h3>TOWN HALL 7</h3>
+    <p>Barbarian King unlocked<br>Game becomes more exciting</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/7.jpeg','townhallsub/7.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">8</span>
+    <div class="img-box"><img src="townhall8.png" loading="lazy"></div>
+    <h3>TOWN HALL 8</h3>
+    <p>Powerful defense stage<br>Strong upgrade progress</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/8.jpeg','townhallsub/8.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">9</span>
+    <div class="img-box"><img src="townhall9.png" loading="lazy"></div>
+    <h3>TOWN HALL 9</h3>
+    <p>Archer Queen unlocked<br>Popular and powerful level</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/9.jpeg','townhallsub/9.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">10</span>
+    <div class="img-box"><img src="townhall10.png" loading="lazy"></div>
+    <h3>TOWN HALL 10</h3>
+    <p>Inferno Towers unlocked<br>Defense becomes dangerous</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/10.jpeg','townhallsub/10.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">11</span>
+    <div class="img-box"><img src="townhall11.png" loading="lazy"></div>
+    <h3>TOWN HALL 11</h3>
+    <p>Grand Warden unlocked<br>Strong attack strategies begin</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/11.jpeg','townhallsub/11.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">12</span>
+    <div class="img-box"><img src="townhall12.png" loading="lazy"></div>
+    <h3>TOWN HALL 12</h3>
+    <p>Town Hall weapon unlocked<br>Base defense becomes stronger</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/12.jpeg','townhallsub/12.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">13</span>
+    <div class="img-box"><img src="townhall13.png" loading="lazy"></div>
+    <h3>TOWN HALL 13</h3>
+    <p>Royal Champion unlocked<br>Advanced attacks begin</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/13.jpeg','townhallsub/13.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">14</span>
+    <div class="img-box"><img src="townhall14.png" loading="lazy"></div>
+    <h3>TOWN HALL 14</h3>
+    <p>Jungle theme<br>Poison bomb defense added</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/14.jpeg','townhallsub/14.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">15</span>
+    <div class="img-box"><img src="townhall15.png" loading="lazy"></div>
+    <h3>TOWN HALL 15</h3>
+    <p>Magic theme<br>Very powerful defenses</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/15.jpeg','townhallsub/15.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">16</span>
+    <div class="img-box"><img src="townhall16.png" loading="lazy"></div>
+    <h3>TOWN HALL 16</h3>
+    <p>Nature theme<br>Advanced upgrade level</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/16.jpeg','townhallsub/16.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">17</span>
+    <div class="img-box"><img src="townhall17.png" loading="lazy"></div>
+    <h3>TOWN HALL 17</h3>
+    <p>High level base<br>Strong modern gameplay</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/17.jpeg','townhallsub/17.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+
+
+<div class="product-card1">
+    <span class="level-badge">18</span>
+    <div class="img-box"><img src="townhall18.png" loading="lazy"></div>
+    <h3>TOWN HALL 18</h3>
+    <p>Latest high-level Town Hall<br>Very strong upgrades</p>
+    <button onclick="openGallery(['townhallsub/description.jpeg','townhallsub/18.jpeg','townhallsub/18.1.jpeg'])">MORE INFORMATION</button>
+</div>
+
+
+
+</section>
+</div>
+
+
+
+<p id="noResult">NO TOWN HALL FOUND ❌</p>
+
+<!-- GALLERY POPUP -->
+<div class="gallery-popup" id="galleryPopup">
+    <div class="gallery-box">
+        <span class="close-btn" onclick="closeGallery()">✖</span>
+
+        <div class="gallery-images" id="galleryImages"></div>
+
+        <div class="image-preview" id="imagePreview">
+            <span class="close-preview" onclick="closePreview()">✖</span>
+            <span class="prev-btn" onclick="prevImage()">❮</span>
+            <img id="previewImg">
+            <span class="next-btn" onclick="nextImage()">❯</span>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentImages = [];
+let currentIndex = 0;
+
+function openGallery(images) {
+    const popup = document.getElementById("galleryPopup");
+    const gallery = document.getElementById("galleryImages");
+    const mainClose = document.querySelector(".close-btn");
+
+    gallery.innerHTML = "";
+    currentImages = images;
+    currentIndex = 0;
+
+    closePreview();
+
+    if (mainClose) {
+        mainClose.style.display = "grid";
+    }
+
+    images.forEach(function(src, index) {
+        const img = document.createElement("img");
+        img.src = src;
+
+        img.onclick = function() {
+            openPreview(index);
+        };
+
+        gallery.appendChild(img);
+    });
+
+    popup.style.display = "flex";
+}
+
+function closeGallery() {
+    closePreview();
+
+    const popup = document.getElementById("galleryPopup");
+    popup.style.display = "none";
+}
+
+function openPreview(index) {
+    currentIndex = index;
+
+    const preview = document.getElementById("imagePreview");
+    const previewImg = document.getElementById("previewImg");
+    const mainClose = document.querySelector(".close-btn");
+
+    previewImg.src = currentImages[currentIndex];
+    preview.style.display = "flex";
+
+    /* hide main close button so buttons don't collide */
+    if (mainClose) {
+        mainClose.style.display = "none";
+    }
+}
+
+function closePreview() {
+    const preview = document.getElementById("imagePreview");
+    const mainClose = document.querySelector(".close-btn");
+
+    preview.style.display = "none";
+
+    /* show main close button again */
+    if (mainClose) {
+        mainClose.style.display = "grid";
+    }
+}
+
+function nextImage() {
+    currentIndex++;
+
+    if (currentIndex >= currentImages.length) {
+        currentIndex = 0;
+    }
+
+    document.getElementById("previewImg").src = currentImages[currentIndex];
+}
+
+function prevImage() {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = currentImages.length - 1;
+    }
+
+    document.getElementById("previewImg").src = currentImages[currentIndex];
+}
+
+function searchTownHall() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".product-card1");
+    const noResult = document.getElementById("noResult");
+
+    let found = false;
+
+    cards.forEach(function(card) {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+
+        if (title.includes(input)) {
+            card.style.display = "flex";
+            found = true;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    noResult.style.display = found || input === "" ? "none" : "block";
+}
+</script>
+</body>
+</html>
