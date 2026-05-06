@@ -1,0 +1,821 @@
+/* ================= BASE ================= */
+body {
+    background:
+        linear-gradient(rgba(5, 3, 25, 0.85), rgba(5, 3, 25, 0.95)),
+        url("images hero/clash-logo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ================= TITLE ================= */
+.town-hero {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.town-title {
+    display: inline-block;
+    color: white;
+
+    /* 🔥 FIXED SIZE */
+    font-size: clamp(24px, 3vw, 34px);
+
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    /* 🔥 REDUCED HEIGHT */
+    padding: 10px 25px;
+
+    border-radius: 16px;
+    background: rgba(10, 5, 35, 0.85);
+    border: 3px solid #ffcc33;
+    text-shadow: 0 4px 0 #3a1a00, 0 0 20px black;
+    box-shadow: 0 0 20px #ff9900, 0 0 40px #b000ff;
+}
+
+/* ================= CARD GRID ================= */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    column-gap: 60px;
+    row-gap: 60px;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* ================= CARD ================= */
+.product-card1 {
+    position: relative;
+    width: 240px;
+    min-height: 340px;
+    padding: 12px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #160024, #07051f);
+    border: 2px solid #b94cff;
+    box-shadow: 0 0 12px #b94cff, inset 0 0 18px rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+.product-card1:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px #ffd700, 0 0 30px #b94cff;
+}
+
+/* ================= BADGE ================= */
+.level-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    background: linear-gradient(#b94cff, #4b006e);
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+}
+
+/* ================= IMAGE ================= */
+.img-box {
+    height: 150px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.product-card1:hover .img-box img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #ffd700);
+}
+
+/* ================= TEXT ================= */
+.product-card1 h3 {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-card1 p {
+    color: white;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+/* ================= BUTTON ================= */
+.product-card1 button {
+    margin-top: auto;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    border-radius: 10px;
+    border: 2px solid #ffcc33;
+    background: linear-gradient(#b94cff, #5b0099);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 12px #ff9900;
+    transition: 0.3s ease;
+}
+
+.product-card1 button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 22px #ffd700;
+}
+
+/* ================= NAV SEARCH ================= */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search input {
+    width: 220px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 2px solid #ffcc33;
+    background: rgba(10, 5, 35, 0.95);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    box-shadow: 0 0 12px #b94cff;
+    transition: all 0.3s ease;
+}
+
+.nav-search input:focus {
+    width: 280px;
+    box-shadow: 0 0 18px #ffd700, 0 0 35px #b94cff;
+}
+
+.nav-search input::placeholder {
+    color: #ccc;
+}
+
+/* ================= NO RESULT ================= */
+#noResult {
+    display: none;
+    text-align: center;
+    color: #ff4d4d;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-shadow: 0 0 10px red;
+}
+
+/* ================= GALLERY POPUP ================= */
+.gallery-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.gallery-box {
+    position: relative;
+
+    width: 900px;          /* 🔥 make it wide */
+    height: 500px;         /* 🔥 rectangle shape */
+
+    max-width: 95vw;       /* responsive */
+    max-height: 90vh;
+
+    background: #080018;
+    border: 3px solid #ffd700;
+    border-radius: 20px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 25px #ffd700, 0 0 45px #a855f7;
+}
+/* small images inside gallery */
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 🔥 4 images in a row */
+    gap: 15px;
+
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.gallery-images img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.08);
+}
+
+/* big image inside same popup */
+.image-preview {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;   /* 👈 space inside box */
+    box-sizing: border-box;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;   /* 👈 keeps full image visible */
+
+    border-radius: 15px;
+}   
+/* close buttons */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.close-preview {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: red;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+}
+
+/* arrows */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: #ffd700;
+    color: black;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(3, 240px);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 240px);
+    }
+}
+
+@media (max-width: 560px) {
+    .town-title {
+        font-size: 28px;
+        padding: 12px 18px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 35px 10px;
+    }
+
+    .product-card1 {
+        width: 100%;
+        max-width: 160px;
+        min-height: 260px;
+        padding: 8px;
+    }
+
+    .img-box {
+        height: 90px;
+    }
+
+    .product-card1 h3 {
+        font-size: 13px;
+    }
+
+    .product-card1 p {
+        font-size: 10px;
+    }
+
+    .product-card1 button {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .level-badge {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .nav-search input {
+        width: 130px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .nav-search input:focus {
+        width: 150px;
+    }
+
+    .gallery-box {
+        width: 92%;
+        padding: 14px;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-images img {
+        height: 120px;
+    }
+
+    .image-preview img {
+        max-width: 85%;
+        max-height: 300px;
+    }
+}
+
+/* FIX CLOSE BUTTON COLLISION */
+
+/* main gallery close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+}
+
+/* preview close button - moved left */
+.close-preview {
+    position: absolute;
+    top: 10px;
+    right: 52px;  /* 👈 important */
+    background: red;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+/* Chrome, Edge, Safari */
+.gallery-images::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gallery-images::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.gallery-images::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ffd700, #b94cff);
+    border-radius: 10px;
+    box-shadow: 0 0 8px #ffd700;
+}
+
+.gallery-images::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#ffcc00, #ff00ff);
+}
+
+/* Firefox */
+.gallery-images {
+    scrollbar-width: thin;
+    scrollbar-color: #ffd700 rgba(0, 0, 0, 0.4);
+}
+
+/* FORCE TOWN HALL NAV SAME AS BUILDINGS */
+nav {
+    height: 70px !important;
+    padding: 0 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+}
+
+.logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.small-logo {
+    width: 42px !important;
+    height: auto !important;
+}
+
+.main-logo {
+    width: 150px !important;
+    height: auto !important;
+}
+
+.nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+}
+
+.nav-links a {
+    width: 125px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    font-size: 15px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.nav-search {
+    margin-left: auto !important;
+}
+
+.nav-search input {
+    width: 190px !important;
+    height: 44px !important;
+    padding: 0 18px !important;
+    font-size: 14px !important;
+}
+
+/* ✅ FINAL NAV SAME AS BUILDINGS + NO OVERFLOW */
+nav {
+    height: 70px !important;
+    padding: 0 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.small-logo {
+    width: 40px !important;
+}
+
+.main-logo {
+    width: 135px !important;
+}
+
+.nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 1 !important;
+}
+
+.nav-links a {
+    width: 115px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    border-radius: 10px !important;
+    white-space: nowrap !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.nav-search {
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+}
+
+.nav-search input {
+    width: 160px !important;
+    height: 42px !important;
+    padding: 0 14px !important;
+    font-size: 13px !important;
+}
+
+/* ✅ MOBILE NAV SAME AS BUILDINGS PAGE */
+@media (max-width: 768px) {
+
+    nav {
+        height: auto !important;
+        padding: 18px 10px 12px !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        overflow: visible !important;
+    }
+
+    .logo-area {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .small-logo {
+        width: 42px !important;
+    }
+
+    .main-logo {
+        width: 150px !important;
+    }
+
+    .nav-links {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .nav-links a {
+        width: auto !important;
+        min-width: 70px !important;
+        height: 38px !important;
+        padding: 0 10px !important;
+        font-size: 11px !important;
+        white-space: nowrap !important;
+    }
+
+    .nav-search {
+        width: 100% !important;
+        margin-left: 0 !important;
+        justify-content: center !important;
+    }
+
+    .nav-search input {
+        width: 85% !important;
+        height: 38px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* 🔥 FIX SEARCH SIZE (MOBILE) */
+@media (max-width: 768px) {
+
+    .nav-search input {
+        width: 70% !important;   /* smaller */
+        height: 34px !important;
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+
+    .nav-search {
+        margin-top: 5px !important;
+    }
+}
+
+/* 🔥 FIX HEADING HIDDEN */
+.town-hero {
+    margin-top: 20px !important;   /* push heading down */
+    position: relative;
+    z-index: 1;
+}
+
+/* 🔥 EXTRA SAFETY (NAV OVERLAP FIX) */
+nav {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ✅ FINAL MOBILE NAV HEIGHT FIX */
+@media (max-width: 768px) {
+    nav {
+        height: auto !important;
+        min-height: unset !important;
+        padding: 12px 10px !important;
+        gap: 10px !important;
+        flex-direction: column !important;
+        overflow: visible !important;
+    }
+
+    .logo-area {
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center !important;
+    }
+
+    .small-logo {
+        width: 38px !important;
+    }
+
+    .main-logo {
+        width: 135px !important;
+    }
+
+    .nav-links {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        margin: 0 !important;
+    }
+
+    .nav-links a {
+        width: auto !important;
+        min-width: 72px !important;
+        height: 34px !important;
+        font-size: 10px !important;
+        padding: 0 7px !important;
+    }
+
+    .nav-search {
+        width: 100% !important;
+        margin: 0 !important;
+        justify-content: center !important;
+    }
+
+    .nav-search input {
+        width: 68% !important;
+        height: 32px !important;
+        padding: 0 12px !important;
+        font-size: 11px !important;
+    }
+
+    .town-hero {
+        margin-top: 10px !important;
+        padding: 18px 6px 10px !important;
+    }
+
+    .town-title {
+        font-size: 22px !important;
+        padding: 10px 14px !important;
+        line-height: 1.3 !important;
+        width: 90% !important;
+    }
+}
+
+/* ✅ MOBILE NAV EXACTLY LIKE BUILDINGS */
+@media (max-width: 768px) {
+
+    nav {
+        height: auto !important;
+        padding: 18px 10px 10px !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        overflow: visible !important;
+    }
+
+    .logo-area {
+        width: 100% !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    .small-logo {
+        width: 38px !important;
+    }
+
+    .main-logo {
+        width: 145px !important;
+    }
+
+    .nav-links {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 7px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .nav-links a {
+        width: auto !important;
+        min-width: 70px !important;
+        height: 36px !important;
+        padding: 0 8px !important;
+        font-size: 10px !important;
+        white-space: nowrap !important;
+    }
+
+    .nav-search {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin: 0 !important;
+        padding-right: 8px !important;
+    }
+
+    .nav-search input {
+        width: 220px !important;
+        height: 36px !important;
+        font-size: 12px !important;
+        padding: 0 14px !important;
+    }
+}
+
+/* 🔥 REMOVE TOP EMPTY SPACE */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+nav {
+    margin-top: 0 !important;
+    padding-top: 10px !important;  /* adjust if needed */
+}
+
+/* remove any hidden gap */
+html, body {
+    overflow-x: hidden;
+}
+
+/* sometimes first section adds gap */
+.logo-area {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
