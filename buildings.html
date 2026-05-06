@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildings</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buildings.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo-area">
+        <img src="babhead.png" class="small-logo">
+        <img src="cocmainlogo.png" class="main-logo">
+    </div>
+
+
+
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="town-halls.html">TOWN HALLS</a>
+        <a href="buildings.html" class="active">BUILDINGS</a>
+        <a href="defence.html">DEFENCE</a>
+        <a href="#">NEWS</a>
+        <a href="#">MORE⌄</a>
+    </div>
+
+
+
+    <div class="nav-search">
+        <input 
+    type="text" 
+    id="navSearchInput" 
+    placeholder="🔍 Search..." 
+    onkeyup="searchBuildings()">
+    </div>
+</nav>
+
+
+
+<section class="town-hero" id="mainBuildingTitle">
+    <h1 class="town-title">BUILDINGS</h1>
+</section>
+
+
+
+
+<!-- RESOURCE BUILDINGS -->
+<div class="building-category">
+    <section class="town-hero">
+        <h1 class="town-title">RESOURCE BUILDINGS</h1>
+    </section>
+
+
+    <section class="product-container">
+        <div class="product-card1">
+            <span class="level-badge">1</span>
+            <div class="img-box">
+                <img src="buildinglogo/goldmine.png" alt="Gold Mine">
+            </div>
+            <h3>GOLD MINE</h3>
+            <p>Collects gold from underground mines.</p>
+            <p><b>GENERATES :</b> <span class="green"> GOLD 🪙</span></p>
+            <button onclick="openGallery(['goldminegalary/goldmineintro.jpeg','goldminegalary/1.jpeg','goldminegalary/2.jpeg','goldminegalary/3.jpeg','goldminegalary/4.jpeg','goldminegalary/5.jpeg','goldminegalary/6.jpeg','goldminegalary/7.jpeg','goldminegalary/8.jpeg','goldminegalary/9.jpeg','goldminegalary/10.jpeg','goldminegalary/11.jpeg','goldminegalary/12.jpeg','goldminegalary/13.jpeg','goldminegalary/14.jpeg','goldminegalary/15.jpeg','goldminegalary/16.jpeg','goldminegalary/17.jpeg','goldminegalary/18.jpeg','goldminegalary/19.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">2</span>
+            <div class="img-box">
+                <img src="buildinglogo/Elixercollector.png" alt="Elixir Collector">
+            </div>
+            <h3>ELIXIR COLLECTOR</h3>
+            <p>Produces elixir for troops and buildings.</p>
+            <p><b>GENERATES :</b> <span class="green">ELIXIR 💧</span></p>
+            <button onclick="openGallery(['ELIXIR COLLECTOR/ELIXIR COLLECTORintro.jpeg','ELIXIR COLLECTOR/1.jpeg','ELIXIR COLLECTOR/2.jpeg','ELIXIR COLLECTOR/3.jpeg','ELIXIR COLLECTOR/4.jpeg','ELIXIR COLLECTOR/5.jpeg','ELIXIR COLLECTOR/6.jpeg','ELIXIR COLLECTOR/7.jpeg','ELIXIR COLLECTOR/8.jpeg','ELIXIR COLLECTOR/9.jpeg','ELIXIR COLLECTOR/10.jpeg','ELIXIR COLLECTOR/11.jpeg','ELIXIR COLLECTOR/12.jpeg','ELIXIR COLLECTOR/13.jpeg','ELIXIR COLLECTOR/14.jpeg','ELIXIR COLLECTOR/15.jpeg','ELIXIR COLLECTOR/16.jpeg','ELIXIR COLLECTOR/17.jpeg','ELIXIR COLLECTOR/18.jpeg','ELIXIR COLLECTOR/19.jpeg','ELIXIR COLLECTOR/20.jpeg','ELIXIR COLLECTOR/21.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">3</span>
+            <div class="img-box">
+                <img src="buildinglogo/darkelixerdrill.png" alt="Dark Elixir Drill">
+            </div>
+            <h3>DARK ELIXIR DRILL</h3>
+            <p>Produces dark elixir for heroes,buildings,spells and troops.</p>
+            <p><b>GENERATES :</b> <span class="green">DARK ELIXIR 💜</span></p>
+            <button onclick="openGallery(['darkelixercollgalary/darkelixerintro.jpeg','darkelixercollgalary/1.jpeg','darkelixercollgalary/2.jpeg','darkelixercollgalary/3.jpeg','darkelixercollgalary/4.jpeg','darkelixercollgalary/5.jpeg','darkelixercollgalary/6.jpeg','darkelixercollgalary/7.jpeg','darkelixercollgalary/8.jpeg','darkelixercollgalary/9.jpeg','darkelixercollgalary/10.jpeg','darkelixercollgalary/11.jpeg','darkelixercollgalary/12.jpeg','darkelixercollgalary/13.jpeg','darkelixercollgalary/14.jpeg','darkelixercollgalary/15.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+    </section>
+</div>
+
+
+
+
+<!-- STORAGES -->
+<div class="building-category">
+    <section class="town-hero">
+        <h1 class="town-title">STORAGES</h1>
+    </section>
+
+    <section class="product-container">
+        <div class="product-card1">
+            <span class="level-badge">1</span>
+            <div class="img-box">
+                <img src="buildinglogo/goldstorage.png" alt="Gold Storage">
+            </div>
+            <h3>GOLD STORAGE</h3>
+            <p>Stores gold safely for upgrades.</p>
+            <p><b>STORES :</b> <span class="green">GOLD 🪙</span></p>
+            <button onclick="openGallery(['goldstoragegalary/goldstorageintro.jpeg','goldstoragegalary/1.jpeg','goldstoragegalary/2.jpeg','goldstoragegalary/3.jpeg','goldstoragegalary/4.jpeg','goldstoragegalary/5.jpeg','goldstoragegalary/6.jpeg','goldstoragegalary/7.jpeg','goldstoragegalary/8.jpeg','goldstoragegalary/9.jpeg','goldstoragegalary/10.jpeg','goldstoragegalary/11.jpeg','goldstoragegalary/12.jpeg','goldstoragegalary/13.jpeg','goldstoragegalary/14.jpeg','goldstoragegalary/15.jpeg','goldstoragegalary/16.jpeg','goldstoragegalary/17.jpeg','goldstoragegalary/18.jpeg','goldstoragegalary/19.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">2</span>
+            <div class="img-box">
+                <img src="buildinglogo/ELIXIR STORAGE.png" alt="Elixir Storage">
+            </div>
+            <h3>ELIXIR STORAGE</h3>
+            <p>Stores elixir for troops and buildings.</p>
+            <p><b>STORES :</b> <span class="green">ELIXIR 💧</span></p>
+            <button onclick="openGallery(['elixerstoragegalary/elixerstroageintro.jpeg','elixerstoragegalary/1.jpeg','elixerstoragegalary/2.jpeg','elixerstoragegalary/3.jpeg','elixerstoragegalary/4.jpeg','elixerstoragegalary/5.jpeg','elixerstoragegalary/6.jpeg','elixerstoragegalary/7.jpeg','elixerstoragegalary/8.jpeg','elixerstoragegalary/9.jpeg','elixerstoragegalary/10.jpeg','elixerstoragegalary/11.jpeg','elixerstoragegalary/12.jpeg','elixerstoragegalary/13.jpeg','elixerstoragegalary/14.jpeg','elixerstoragegalary/15.jpeg','elixerstoragegalary/16.jpeg','elixerstoragegalary/17.jpeg','elixerstoragegalary/18.jpeg','elixerstoragegalary/19.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">3</span>
+            <div class="img-box">
+                <img src="buildinglogo/darkelixertorage1.png" alt="Dark Elixir Storage">
+            </div>
+            <h3>DARK ELIXIR STORAGE</h3>
+            <p>Stores dark elixir for troops and buildings.</p>
+            <p><b>STORES :</b> <span class="green">DARK ELIXIR 💜</span></p>
+            <button onclick="openGallery(['darkgalary/dark1.jpeg','darkgalary/dark2.jpeg','darkgalary/dark3.jpeg','darkgalary/dark4.jpeg','darkgalary/dark5.jpeg','darkgalary/dark6.jpeg','darkgalary/dark7.jpeg','darkgalary/dark8.jpeg','darkgalary/dark9.jpeg','darkgalary/dark10.jpeg','darkgalary/dark11.jpeg','darkgalary/dark12.jpeg','darkgalary/dark13.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+<!-- TRAINING -->
+<div class="building-category">
+    <section class="town-hero">
+        <h1 class="town-title">TRAINING</h1>
+    </section>
+
+    <section class="product-container">
+        <div class="product-card1">
+            <span class="level-badge">1</span>
+            <div class="img-box">
+                <img src="buildinglogo/mainbarack.png" alt="Barracks">
+            </div>
+            <h3>BARRACKS</h3>
+            <p>Trains new troops for your army.</p>
+            <p><b>TRAINS :</b> <span class="green">ELIXIR TROOPS</span></p>
+            <button onclick="openGallery(['barrakgalary/bakintro.jpeg','barrakgalary/bak1.jpeg','barrakgalary/bak2.jpeg','barrakgalary/bak3.jpeg','barrakgalary/bak4.jpeg','barrakgalary/bak5.jpeg','barrakgalary/bak6.jpeg','barrakgalary/bak7.jpeg','barrakgalary/bak8.jpeg','barrakgalary/bak9.jpeg','barrakgalary/bak10.jpeg','barrakgalary/bak11.jpeg','barrakgalary/bak12.jpeg','barrakgalary/bak13.jpeg','barrakgalary/bak14.jpeg','barrakgalary/bak15.jpeg','barrakgalary/bak16.jpeg','barrakgalary/bak17.jpeg','barrakgalary/bak18.jpeg','barrakgalary/bak19.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">2</span>
+            <div class="img-box">
+                <img src="buildinglogo/DARKBARRACK.png" alt="Dark Barracks">
+            </div>
+            <h3>DARK BARRACKS</h3>
+            <p>Trains dark troops for your army.</p>
+            <p><b>TRAINS :</b> <span class="green">DARK TROOPS</span></p>
+            <button onclick="openGallery(['darkbarrackgalary/1intro.jpeg','darkbarrackgalary/1.jpeg','darkbarrackgalary/2.jpeg','darkbarrackgalary/3.jpeg','darkbarrackgalary/4.jpeg','darkbarrackgalary/5.jpeg','darkbarrackgalary/6.jpeg','darkbarrackgalary/7.jpeg','darkbarrackgalary/8.jpeg','darkbarrackgalary/9.jpeg','darkbarrackgalary/10.jpeg','darkbarrackgalary/11.jpeg','darkbarrackgalary/12.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">3</span>
+            <div class="img-box">
+                <img src="buildinglogo/spellfactory.png" alt="Spell Factory">
+            </div>
+            <h3>SPELL FACTORY</h3>
+            <p>Creates spells for your army.</p>
+            <p><b>CREATES :</b> <span class="green">SPELLS</span></p>
+            <button onclick="openGallery(['spellgalary/spellintro.jpeg','spellgalary/1.jpeg','spellgalary/2.jpeg','spellgalary/3.jpeg','spellgalary/4.jpeg','spellgalary/4.1.jpeg','spellgalary/5.jpeg','spellgalary/6.jpeg','spellgalary/7.jpeg','spellgalary/8.jpeg','spellgalary/9.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">4</span>
+            <div class="img-box">
+                <img src="buildinglogo/dark spell factory.png" alt="Dark Spell Factory">
+            </div>
+            <h3>DARK SPELL FACTORY</h3>
+            <p>Creates dark spells for your army.</p>
+            <p><b>CREATES :</b> <span class="green">DARK SPELLS</span></p>
+            <button onclick="openGallery(['darkspellgalary/darkspellintro.jpeg','darkspellgalary/1.jpeg','darkspellgalary/2.jpeg','darkspellgalary/3.jpeg','darkspellgalary/4.jpeg','darkspellgalary/5.jpeg','darkspellgalary/6.jpeg','darkspellgalary/7.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+    </section>
+</div>
+
+
+
+
+<!-- ARMY MANAGEMENT -->
+<div class="building-category">
+    <section class="town-hero">
+        <h1 class="town-title">ARMY MANAGEMENT</h1>
+    </section>
+
+    <section class="product-container">
+        <div class="product-card1">
+            <span class="level-badge">1</span>
+            <div class="img-box">
+                <img src="buildinglogo/armycamp1.png" alt="Army Camp">
+            </div>
+            <h3>ARMY CAMP</h3>
+            <p>Increases your army capacity.</p>
+            <p><b>CAPACITY :</b> <span class="green">ARMY SPACE </span></p>
+            <button onclick="openGallery(['armycampgalary/campintro.jpeg','armycampgalary/1.jpeg','armycampgalary/2.jpeg','armycampgalary/3.jpeg','armycampgalary/4.jpeg','armycampgalary/5.jpeg','armycampgalary/6.jpeg','armycampgalary/7.jpeg','armycampgalary/8.jpeg','armycampgalary/9.jpeg','armycampgalary/10.jpeg','armycampgalary/11.jpeg','armycampgalary/12.jpeg','armycampgalary/13.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">2</span>
+            <div class="img-box">
+                <img src="buildinglogo/laboratory.png" alt="Laboratory">
+            </div>
+            <h3>LABORATORY</h3>
+            <p>Upgrades troops and spells.</p>
+            <p><b>UPGRADES :</b> <span class="green">TROOPS AND SPELLS</span></p>
+            <button onclick="openGallery(['labogalary/labointro.jpeg','labogalary/1.jpeg','labogalary/2.jpeg','labogalary/3.jpeg','labogalary/4.jpeg','labogalary/5.jpeg','labogalary/6.jpeg','labogalary/7.jpeg','labogalary/8.jpeg','labogalary/9.jpeg','labogalary/10.jpeg','labogalary/11.jpeg','labogalary/12.jpeg','labogalary/13.jpeg','labogalary/14.jpeg','labogalary/15.jpeg','labogalary/16.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">3</span>
+            <div class="img-box">
+                <img src="buildinglogo/clancastle.png" alt="Clan Castle">
+            </div>
+            <h3>CLAN CASTLE</h3>
+            <p>Stores clan troops, spells, and siege machines.</p>
+            <p><b>CAPACITY :</b> <span class="green">CLAN TROOPS</span></p>
+            <button onclick="openGallery(['clangalary/clanintro.jpeg','clangalary/1.jpeg','clangalary/2.jpeg','clangalary/3.jpeg','clangalary/4.jpeg','clangalary/5.jpeg','clangalary/6.jpeg','clangalary/7.jpeg','clangalary/8.jpeg','clangalary/9.jpeg','clangalary/10.jpeg','clangalary/11.jpeg','clangalary/12.jpeg','clangalary/13.jpeg','clangalary/14.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+    </section>
+</div>
+
+
+
+
+<!-- BUILDER & SUPPORT BUILDINGS -->
+<div class="building-category">
+    <section class="town-hero">
+        <h1 class="town-title">BUILDER & SUPPORT BUILDINGS</h1>
+    </section>
+
+    <section class="product-container">
+        <div class="product-card1">
+            <span class="level-badge">1</span>
+            <div class="img-box">
+                <img src="buildinglogo/builder.png" alt="Builder Hut">
+            </div>
+            <h3>BUILDER HUT</h3>
+            <p>Provides a space for your builder to work.</p>
+            <p><b>BUILDERS :</b> <span class="green">AVAILABLE</span></p>
+            <button onclick="openGallery(['builderhutgalary/builderintro.jpeg','builderhutgalary/1.jpeg','builderhutgalary/2.jpeg','builderhutgalary/3.jpeg','builderhutgalary/4.jpeg','builderhutgalary/5.jpeg','builderhutgalary/6.jpeg','builderhutgalary/7.jpeg','builderhutgalary/8.jpeg','builderhutgalary/9.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">2</span>
+            <div class="img-box">
+                <img src="buildinglogo/Workshop.png" alt="Workshop">
+            </div>
+            <h3>WORKSHOP</h3>
+            <p>Builds siege machines for attacks.</p>
+            <p><b>BUILDS: </b> <span class="green">SIEGE MACHINES</span></p>
+            <button onclick="openGallery(['WORKSHOP/workintro.jpeg','WORKSHOP/1.jpeg','WORKSHOP/2.jpeg','WORKSHOP/3.jpeg','WORKSHOP/4.jpeg','WORKSHOP/5.jpeg','WORKSHOP/6.jpeg','WORKSHOP/7.jpeg','WORKSHOP/8.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">3</span>
+            <div class="img-box">
+                <img src="buildinglogo/BlackSmith.png" alt="Black Smith">
+            </div>
+            <h3>BLACK SMITH</h3>
+            <p>Upgrades hero equipment.</p>
+            <p><b>UPGRADES :</b> <span class="green">HERO EQUIPMENT</span></p>
+            <button onclick="openGallery(['BLACKSMITH/blackintro.jpeg','BLACKSMITH/1.jpeg','BLACKSMITH/2.jpeg','BLACKSMITH/3.jpeg','BLACKSMITH/4.jpeg','BLACKSMITH/5.jpeg','BLACKSMITH/6.jpeg','BLACKSMITH/7.jpeg','BLACKSMITH/8.jpeg','BLACKSMITH/9.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">4</span>
+            <div class="img-box">
+                <img src="buildinglogo/pethouse.png" alt="Pet House">
+            </div>
+            <h3>PET HOUSE</h3>
+            <p>Provides a home for hero pets.</p>
+            <p><b>TRAINS :</b> <span class="green">HERO PETS</span></p>
+            <button onclick="openGallery(['petgalary/petintro.jpeg','petgalary/1.jpeg','petgalary/2.jpeg','petgalary/3.jpeg','petgalary/4.jpeg','petgalary/5.jpeg','petgalary/6.jpeg','petgalary/7.jpeg','petgalary/8.jpeg','petgalary/9.jpeg','petgalary/10.jpeg','petgalary/11.jpeg','petgalary/12.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+
+
+
+
+
+        <div class="product-card1">
+            <span class="level-badge">5</span>
+            <div class="img-box">
+                <img src="buildinglogo/herohall.png" alt="Hero Hall">
+            </div>
+            <h3>HERO HALL</h3>
+            <p>Manages and upgrades your heroes.</p>
+            <p><b>MANAGES :</b> <span class="green">HEROES</span></p>
+            <button onclick="openGallery(['herohallgalary/herointro.jpeg','herohallgalary/1.jpeg','herohallgalary/2.jpeg','herohallgalary/3.jpeg','herohallgalary/4.jpeg','herohallgalary/5.jpeg','herohallgalary/6.jpeg','herohallgalary/7.jpeg','herohallgalary/8.jpeg','herohallgalary/9.jpeg','herohallgalary/10.jpeg','herohallgalary/11.jpeg','herohallgalary/12.jpeg'])">
+                VIEW DETAILS
+            </button>
+        </div>
+    </section>
+</div>
+
+
+
+
+<p id="noResult">NO BUILDING FOUND ❌</p>
+
+<!-- GALLERY POPUP -->
+<div class="gallery-popup" id="galleryPopup">
+    <div class="gallery-box">
+
+        <span class="close-btn" onclick="closeGallery()">✖</span>
+
+        <div class="gallery-images" id="galleryImages"></div>
+
+        <div class="image-preview" id="imagePreview">
+            <span class="close-preview" onclick="closePreview()">✖</span>
+            <span class="prev-btn" onclick="prevImage()">❮</span>
+            <span class="next-btn" onclick="nextImage()">❯</span>
+            <img id="previewImg" alt="Preview Image">
+        </div>
+
+    </div>
+</div>
+
+<script>
+let currentImages = [];
+let currentIndex = 0;
+
+/* GALLERY */
+function openGallery(images) {
+    const popup = document.getElementById("galleryPopup");
+    const gallery = document.getElementById("galleryImages");
+
+    gallery.innerHTML = "";
+    currentImages = images;
+    currentIndex = 0;
+
+    images.forEach(function(src, index) {
+        const img = document.createElement("img");
+        img.src = src;
+        img.onclick = function() {
+            openPreview(index);
+        };
+        gallery.appendChild(img);
+    });
+
+    popup.style.display = "flex";
+}
+
+function closeGallery() {
+    document.getElementById("galleryPopup").style.display = "none";
+    closePreview();
+}
+
+function openPreview(index) {
+    currentIndex = index;
+    document.getElementById("previewImg").src = currentImages[currentIndex];
+    document.getElementById("imagePreview").style.display = "flex";
+}
+
+function closePreview() {
+    document.getElementById("imagePreview").style.display = "none";
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    document.getElementById("previewImg").src = currentImages[currentIndex];
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    document.getElementById("previewImg").src = currentImages[currentIndex];
+}
+
+/* SEARCH */
+function searchBuildings() {
+    const input = document.getElementById("navSearchInput").value.toLowerCase();
+    const categories = document.querySelectorAll(".building-category");
+    const noResult = document.getElementById("noResult");
+
+    let found = false;
+
+    categories.forEach(function(category) {
+        const cards = category.querySelectorAll(".product-card1");
+        let categoryFound = false;
+
+        cards.forEach(function(card) {
+            const text = card.innerText.toLowerCase();
+
+            if (text.includes(input)) {
+                card.style.display = "flex";
+                found = true;
+                categoryFound = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        category.style.display = input === "" ? "block" : (categoryFound ? "block" : "none");
+    });
+
+    const mainTitle = document.getElementById("mainBuildingTitle");
+    if (mainTitle) {
+        mainTitle.style.display = input === "" ? "block" : "none";
+    }
+
+    if (noResult) {
+        noResult.style.display = found || input === "" ? "none" : "block";
+    }
+}
+</script>
+</body>
+</html>
